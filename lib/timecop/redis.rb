@@ -1,4 +1,4 @@
-require "timecop/redis/version"
+require 'timecop/redis/version'
 
 module Timecop
   module Redis

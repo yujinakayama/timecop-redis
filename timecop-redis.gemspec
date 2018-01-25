@@ -4,7 +4,7 @@ require 'timecop/redis/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'timecop-redis'
-  spec.version       = Timecop::Redis::VERSION
+  spec.version       = Timecop::Redis::Version.to_s
   spec.authors       = ['Yuji Nakayama']
   spec.email         = ['nkymyj@gmail.com']
 

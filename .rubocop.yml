@@ -1,8 +1,13 @@
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
 Metrics/BlockLength:
   Exclude:
     - spec/**/*
 
 Metrics/LineLength:
+  Exclude:
+    - spec/**/*
   Max: 120
 
 Style/Documentation:

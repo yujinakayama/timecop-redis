@@ -9,3 +9,5 @@ end
 RuboCop::RakeTask.new
 
 task default: %i[spec rubocop]
+
+task ci: %i[spec rubocop]

@@ -38,5 +38,11 @@ RSpec.describe Timecop::Redis do
          .and not_change { redis.get('persistent_key') }.from('persistent_value')
       end
     end
+
+    context 'when a block is given' do
+      it 'raises ArgumentError' do
+        expect { Timecop::Redis.travel(Time.now + 6) {} }.to raise_error(ArgumentError)
+      end
+    end
   end
 end

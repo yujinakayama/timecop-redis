@@ -17,8 +17,8 @@ class Timecop
         @traveler = nil
       end
 
-      def travel(new_time)
-        traveler.travel(from: Time.now, to: new_time)
+      def travel(new_time, &block)
+        traveler.travel(from: Time.now, to: new_time, &block)
       end
 
       def traveler

@@ -11,7 +11,7 @@ class Timecop
       old_time = Time.now
       travel_without_redis(*args, &block)
       new_time = Time.now
-      Timecop::Redis.traveler.travel(from: old_time, to: new_time)
+      Timecop::Redis.traveler.travel(from: old_time, to: new_time, &block)
     else
       travel_without_redis(*args, &block)
     end

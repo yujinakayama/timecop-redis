@@ -7,8 +7,9 @@ class Timecop
         @redis = redis
       end
 
-      # TODO: Support auto-rewind block
       def travel(from:, to:)
+        raise ArgumentError, 'Auto-rewind block is not yet supported' if block_given?
+
         advanced_milliseconds = ((to - from) * 1000).to_i
 
         expirable_keys.each do |key, old_remaining_milliseconds|

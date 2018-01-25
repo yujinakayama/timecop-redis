@@ -35,6 +35,12 @@ RSpec.describe 'Timecop integration' do
          .and change { redis.get('5_seconds_lifetime_key') }.from('5_seconds_lifetime_value').to(nil)
          .and not_change { redis.get('persistent_key') }.from('persistent_value')
       end
+
+      context 'when a block is given' do
+        it 'raises ArgumentError' do
+          expect { Timecop.travel(Time.now + 6) {} }.to raise_error(ArgumentError)
+        end
+      end
     end
 
     context 'when Timecop::Redis.integrate_into_timecop_travel? is false' do

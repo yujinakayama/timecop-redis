@@ -1,4 +1,4 @@
-module Timecop
+class Timecop
   module Redis
     class Traveler
       attr_reader :redis

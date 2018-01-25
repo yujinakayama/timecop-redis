@@ -1,7 +1,8 @@
 require_relative 'redis/traveler'
 require 'redis'
+require 'timecop'
 
-module Timecop
+class Timecop
   module Redis
     class << self
       def redis

@@ -1,4 +1,4 @@
-module Timecop
+class Timecop
   module Redis
     # http://semver.org/
     module Version

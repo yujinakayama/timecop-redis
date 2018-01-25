@@ -1,6 +1,10 @@
 Layout/MultilineMethodCallIndentation:
   Enabled: false
 
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+  
 Metrics/BlockLength:
   Exclude:
     - spec/**/*

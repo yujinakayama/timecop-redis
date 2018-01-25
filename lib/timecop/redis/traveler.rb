@@ -32,7 +32,7 @@ module Timecop
           # The command returns -2 if the key does not exist.
           # The command returns -1 if the key exists but has no associated expire.
           remaining_milliseconds = redis.pttl(key)
-          next if remaining_milliseconds.negative?
+          next if remaining_milliseconds < 0
           yield key, remaining_milliseconds
         end
       end

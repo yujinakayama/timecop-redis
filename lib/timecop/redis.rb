@@ -9,7 +9,7 @@ class Timecop
       alias integrate_into_timecop_travel? integrate_into_timecop_travel
 
       def redis
-        @redis || ::Redis.current
+        @redis || ::Redis.new
       end
 
       def redis=(redis)
